@@ -7,18 +7,20 @@
 <body>
     <h1>Update Customer</h1>
     <div id="UpdateForm">
+        @{Customer customer = ViewBag.Customer;
         <form action="/customers/update/@ViewBag.Customer.Id" method="post">
-            <input type="text" name="CompanyName" value="@ViewBag.Customer.CompanyName" />
+            <input type="text" name="CompanyName" value="@customer.CompanyName" />
             <span></span>
             <br />
-            <input type="text" name="Address" value="@ViewBag.Customer.Address" />
+            <input type="text" name="Address" value="@customer.Address" />
             <span></span>
             <br />
-            <input type="text" name="EmployeeCount" value="@ViewBag.Customer.EmployeeCount" />
+            <input type="text" name="EmployeeCount" value="@customer.EmployeeCount" />
             <span></span>
             <br />
             <input type="submit" value="Update" />
         </form>
+        }
     </div>
 </body>
 </html>

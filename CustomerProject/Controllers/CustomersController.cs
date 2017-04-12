@@ -47,7 +47,7 @@ namespace CustomerProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Customer customer, int id)
+        public IActionResult Update(Customer customer)
         {
             UpdateCustomer(customer);
             return RedirectToAction(nameof(Index));

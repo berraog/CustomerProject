@@ -1,0 +1,24 @@
+﻿@using CustomerProject.Models
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <h1>All Customers</h1>
+
+    <div id="CustomerList">
+        <ul>
+            @foreach (Customer item in ViewBag.Customers)
+            {
+                <li><a href="/customers/update/@item.Id">@item.CompanyName</a> 
+                    <a href="/customers/delete/@item.Id"><input type="button" value="Delete" /></a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div id="CreateCustomer">
+        <a href="/customers/create"><input type="button" value="Create Customer" /></a>
+    </div>
+</body>
+</html>
